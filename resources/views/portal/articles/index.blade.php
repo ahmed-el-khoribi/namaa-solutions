@@ -23,7 +23,19 @@
         </div>
     @endif
 
-
+    <form method="GET">
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            name="search"
+            value="{{ request()->get('search') }}"
+            class="form-control"
+            placeholder="Search..."
+            aria-label="Search"
+            aria-describedby="button-addon2">
+          <button class="btn btn-success" type="submit" id="button-addon2">Search</button>
+        </div>
+    </form>
     <table class="table table-bordered">
     <tr>
         <th>ID</th>

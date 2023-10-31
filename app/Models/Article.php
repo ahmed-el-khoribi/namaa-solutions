@@ -8,10 +8,11 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\NewArticleCreated;
+use Laravel\Scout\Searchable;
 
 class Article extends Model
 {
-    use HasFactory;
+    use HasFactory, Searchable;
 
     /**
      * The attributes that are mass assignable.
@@ -119,5 +120,19 @@ class Article extends Model
     public function scopeOwnedBy(Builder $query, string $author_id): void
     {
         $query->where('author_id', $author_id);
+    }
+
+     /**
+     * Get the indexable data array for the model.
+     *
+     * @return array
+     */
+    public function toSearchableArray()
+    {
+        return [
+            'title' => $this->title,
+            'brief' => $this->brief,
+            'content' => $this->content
+        ];
     }
 }

@@ -50,6 +50,10 @@ To Install & run the system, please follow the below commands:
 
     php artisan app:sync-permissions
 
+6.  To Configure Scout Driver (Full text Search feature) please add below line to .env file:
+
+    SCOUT_DRIVER=database
+
 
 # System Feature List:
     -   Multi Roles & Permission Based system with fully cutomizations (Roles are based on routes).
@@ -60,3 +64,4 @@ To Install & run the system, please follow the below commands:
     -   Secure Against CSRF.
     -   Notifcation Mail to admins when new article is created.
     -   API for articles with pagination.
+    -   Full Text Search for articles module in admin portal using (title, brief, or content).

@@ -26,7 +26,11 @@ class ArticleController extends Controller
      */
     public function index(Request $request, $limit = 5)
     {
-        $data = Article::latest()->paginate($limit);
+        if($request->filled('search')){
+            $data = Article::search($request->search)->paginate($limit);
+        }else{
+            $data = Article::latest()->paginate($limit);
+        }
 
         return view("{$this->adminViewPrefix}.articles.index",compact('data'))
             ->with('i', ($request->input('page', 1) - 1) * $limit);
