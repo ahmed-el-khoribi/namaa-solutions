@@ -13,7 +13,7 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request, $limit = 2)
+    public function index(Request $request, $limit = 15)
     {
         $data = Article::latest()->paginate($limit);
 

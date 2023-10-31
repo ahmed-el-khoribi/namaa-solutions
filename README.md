@@ -58,3 +58,5 @@ To Install & run the system, please follow the below commands:
     -   Fully Article Management.
     -   Hierarchical comments system (Comments and replies to infinite level of depth).
     -   Secure Against CSRF.
+    -   Notifcation Mail to admins when new article is created.
+    -   API for articles with pagination.
