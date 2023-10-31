@@ -46,7 +46,7 @@ To Install & run the system, please follow the below commands:
 
     {hostname}/api/v1/articles?page=2
 
-5.  In case of adding new Routes ti the system, we need to sync new routes with permissions model, to do so run below command:
+5.  In case of adding new Routes to the system, we need to sync new routes with permissions model, to do so run below command:
 
     php artisan app:sync-permissions
 
