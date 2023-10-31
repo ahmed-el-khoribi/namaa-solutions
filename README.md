@@ -54,6 +54,11 @@ To Install & run the system, please follow the below commands:
 
     SCOUT_DRIVER=database
 
+7.  Model Caching is applied on "Article" Model, to enable it on any other model use the below trait:
+
+    use GeneaLabs\LaravelModelCaching\Traits\Cachable;
+
+    use Cachable;
 
 # System Feature List:
     -   Multi Roles & Permission Based system with fully customizations (Roles are based on routes).
@@ -65,3 +70,4 @@ To Install & run the system, please follow the below commands:
     -   Notifcation Mail to admins when new article is created.
     -   API for articles with pagination.
     -   Full Text Search for articles module in admin portal using (title, brief, or content).
+    -   Advanced Model Caching

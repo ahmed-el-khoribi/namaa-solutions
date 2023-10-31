@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Mail;
@@ -12,7 +13,7 @@ use Laravel\Scout\Searchable;
 
 class Article extends Model
 {
-    use HasFactory, Searchable;
+    use HasFactory, Searchable, Cachable;
 
     /**
      * The attributes that are mass assignable.
