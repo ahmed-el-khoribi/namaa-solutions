@@ -56,7 +56,7 @@ To Install & run the system, please follow the below commands:
 
 
 # System Feature List:
-    -   Multi Roles & Permission Based system with fully cutomizations (Roles are based on routes).
+    -   Multi Roles & Permission Based system with fully customizations (Roles are based on routes).
     -   Inpendent File Manager Model Which can be injected in any other Model with few lines of code.
     -   Image Rezing Feature.
     -   Fully Article Management.
